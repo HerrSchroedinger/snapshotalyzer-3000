@@ -46,6 +46,10 @@ def list_snapshots(project):
                     s.progress,
                     s.start_time.strfrime("%c")
                     )))
+
+                if s.state() == 'completed':
+                    break
+
     return
 
 
